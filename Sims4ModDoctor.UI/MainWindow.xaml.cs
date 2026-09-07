@@ -1,6 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using Sims4ModDoctor.Core;
 
 namespace Sims4ModDoctor.UI
@@ -9,6 +12,7 @@ namespace Sims4ModDoctor.UI
     {
         private string? _selectedModsPath;
         private readonly ModScannerService _scannerService = new();
+        private List<ModFileItem> _allMods = new();
 
         public MainWindow()
         {
@@ -39,31 +43,44 @@ namespace Sims4ModDoctor.UI
                 return;
             }
 
-            TxtStatus.Text = "⏳ 正在分析 Mods 结构与文件元数据，请稍候...";
+            TxtStatus.Text = "⏳ 正在分析 Mods 结构与文件元数据...";
 
-            // 调用 Core 层的异步扫描服务
-            var modList = await _scannerService.ScanDirectoryAsync(_selectedModsPath);
+            _allMods = await _scannerService.ScanDirectoryAsync(_selectedModsPath);
 
-            int packageCount = modList.Count(m => m.Type == ModFileType.Package);
-            int scriptCount = modList.Count(m => m.Type == ModFileType.Script);
-            double totalMB = modList.Sum(m => m.FileSizeBytes) / (1024.0 * 1024.0);
+            int packageCount = _allMods.Count(m => m.Type == ModFileType.Package);
+            int scriptCount = _allMods.Count(m => m.Type == ModFileType.Script);
+            double totalMB = _allMods.Sum(m => m.FileSizeBytes) / (1024.0 * 1024.0);
 
-            TxtStatus.Text = $"扫描完成！分析文件：{modList.Count} 个 | 总体积：{totalMB:F2} MB";
+            // 渲染数据到 DataGrid
+            ApplyFilter();
 
-            MessageBox.Show(
-                $"诊断完毕！\n" +
-                $"• 扫描文件总量: {modList.Count} 个\n" +
-                $"• .package 架构文件: {packageCount} 个\n" +
-                $"• .ts4script 脚本文件: {scriptCount} 个\n" +
-                $"• Mods 占用体积: {totalMB:F2} MB", 
-                "Mod Doctor 诊断报告", 
-                MessageBoxButton.OK, 
-                MessageBoxImage.Information);
+            TxtStatus.Text = $"扫描完成！共发现 {_allMods.Count} 个文件（.package: {packageCount} | .ts4script: {scriptCount}），总体积：{totalMB:F2} MB";
         }
 
-        private void TxtSearch_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            // 预留搜索事件
+            ApplyFilter();
+        }
+
+        private void ApplyFilter()
+        {
+            if (_allMods == null || !_allMods.Any()) return;
+
+            string keyword = TxtSearch.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                GridModList.ItemsSource = _allMods;
+            }
+            else
+            {
+                var filtered = _allMods.Where(m => 
+                    m.Name.ToLower().Contains(keyword) || 
+                    m.RelativePath.ToLower().Contains(keyword)
+                ).ToList();
+
+                GridModList.ItemsSource = filtered;
+            }
         }
     }
 }

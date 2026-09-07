@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sims4ModDoctor.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c60f607bdaf691e7f683e26b659ee2a9e6044b3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3553000dc0d711b2945f76847ed79472f671b7dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sims4ModDoctor.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sims4ModDoctor.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
