@@ -17,3 +17,7 @@ D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\refin
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI.pdb
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI.genruntimeconfig.cache
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\ref\Sims4ModDoctor.UI.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\Debug\net8.0-windows\Sims4ModDoctor.Core.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\Debug\net8.0-windows\Sims4ModDoctor.Core.pdb
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI.csproj.AssemblyReference.cache
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4Mod.37C0EE11.Up2Date

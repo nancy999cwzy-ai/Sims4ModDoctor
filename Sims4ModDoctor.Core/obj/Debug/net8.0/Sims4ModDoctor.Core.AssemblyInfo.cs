@@ -10,15 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Sims4ModDoctor.UI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Sims4ModDoctor.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+065d4ca754645de880066d281bc15d698a109898")]
-[assembly: System.Reflection.AssemblyProductAttribute("Sims4ModDoctor.UI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Sims4ModDoctor.UI")]
+[assembly: System.Reflection.AssemblyProductAttribute("Sims4ModDoctor.Core")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Sims4ModDoctor.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

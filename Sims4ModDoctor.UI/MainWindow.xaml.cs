@@ -1,18 +1,20 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Windows;
+using Sims4ModDoctor.Core;
 
 namespace Sims4ModDoctor.UI
 {
     public partial class MainWindow : Window
     {
         private string? _selectedModsPath;
+        private readonly ModScannerService _scannerService = new();
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        // 选择文件夹点击逻辑
         private void BtnSelectFolder_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new Microsoft.Win32.OpenFolderDialog
@@ -29,8 +31,7 @@ namespace Sims4ModDoctor.UI
             }
         }
 
-        // 开始扫描点击逻辑
-        private void BtnStartScan_Click(object sender, RoutedEventArgs e)
+        private async void BtnStartScan_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(_selectedModsPath) || !Directory.Exists(_selectedModsPath))
             {
@@ -38,22 +39,26 @@ namespace Sims4ModDoctor.UI
                 return;
             }
 
-            TxtStatus.Text = "正在后台扫描 Mods 文件...";
-            
-            // 简单的同级别文件计数
-            string[] files = Directory.GetFiles(_selectedModsPath, "*.*", SearchOption.AllDirectories);
-            int packageCount = 0;
-            int scriptCount = 0;
+            TxtStatus.Text = "⏳ 正在分析 Mods 结构与文件元数据，请稍候...";
 
-            foreach (var file in files)
-            {
-                string ext = Path.GetExtension(file).ToLower();
-                if (ext == ".package") packageCount++;
-                else if (ext == ".ts4script") scriptCount++;
-            }
+            // 调用 Core 层的异步扫描服务，界面不卡顿
+            var modList = await _scannerService.ScanDirectoryAsync(_selectedModsPath);
 
-            TxtStatus.Text = $"扫描完成！共发现 {files.Length} 个文件（.package: {packageCount} | .ts4script: {scriptCount}）";
-            MessageBox.Show($"扫描成功！\n共扫描 {files.Length} 个文件。\n.package: {packageCount}\n.ts4script: {scriptCount}", "诊断报告", MessageBoxButton.OK, MessageBoxImage.Information);
+            int packageCount = modList.Count(m => m.Type == ModFileType.Package);
+            int scriptCount = modList.Count(m => m.Type == ModFileType.Script);
+            double totalMB = modList.Sum(m => m.FileSizeBytes) / (1024.0 * 1024.0);
+
+            TxtStatus.Text = $"扫描完成！分析文件：{modList.Count} 个 | 总体积：{totalMB:F2} MB";
+
+            MessageBox.Show(
+                $"诊断完毕！\n" +
+                $"• 扫描文件总量: {modList.Count} 个\n" +
+                $"• .package 架构文件: {packageCount} 个\n" +
+                $"• .ts4script 脚本文件: {scriptCount} 个\n" +
+                $"• Mods 占用体积: {totalMB:F2} MB", 
+                "Mod Doctor 诊断报告", 
+                MessageBoxButton.OK, 
+                MessageBoxImage.Information);
         }
     }
 }

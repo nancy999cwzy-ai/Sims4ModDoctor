@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sims4ModDoctor.UI", "Sims4M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sims4ModDoctor.Spike", "Sims4ModDoctor.Spike\Sims4ModDoctor.Spike.csproj", "{846EC483-EC92-4F55-955C-D2ABFAE67198}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sims4ModDoctor.Core", "Sims4ModDoctor.Core\Sims4ModDoctor.Core.csproj", "{4C282F5C-3579-4EA8-A5E8-7B8F05907EF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{846EC483-EC92-4F55-955C-D2ABFAE67198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846EC483-EC92-4F55-955C-D2ABFAE67198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846EC483-EC92-4F55-955C-D2ABFAE67198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C282F5C-3579-4EA8-A5E8-7B8F05907EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C282F5C-3579-4EA8-A5E8-7B8F05907EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C282F5C-3579-4EA8-A5E8-7B8F05907EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C282F5C-3579-4EA8-A5E8-7B8F05907EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
