@@ -1,0 +1,14 @@
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\Debug\net8.0\Sims4ModDoctor.Spike.exe
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\Debug\net8.0\Sims4ModDoctor.Spike.deps.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\Debug\net8.0\Sims4ModDoctor.Spike.runtimeconfig.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\Debug\net8.0\Sims4ModDoctor.Spike.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\Debug\net8.0\Sims4ModDoctor.Spike.pdb
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.AssemblyInfoInputs.cache
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.AssemblyInfo.cs
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.csproj.CoreCompileInputs.cache
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\refint\Sims4ModDoctor.Spike.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.pdb
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.genruntimeconfig.cache
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\ref\Sims4ModDoctor.Spike.dll
