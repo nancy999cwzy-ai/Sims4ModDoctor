@@ -41,7 +41,7 @@ namespace Sims4ModDoctor.UI
 
             TxtStatus.Text = "⏳ 正在分析 Mods 结构与文件元数据，请稍候...";
 
-            // 调用 Core 层的异步扫描服务，界面不卡顿
+            // 调用 Core 层的异步扫描服务
             var modList = await _scannerService.ScanDirectoryAsync(_selectedModsPath);
 
             int packageCount = modList.Count(m => m.Type == ModFileType.Package);
@@ -59,6 +59,11 @@ namespace Sims4ModDoctor.UI
                 "Mod Doctor 诊断报告", 
                 MessageBoxButton.OK, 
                 MessageBoxImage.Information);
+        }
+
+        private void TxtSearch_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            // 预留搜索事件
         }
     }
 }
