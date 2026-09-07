@@ -12,3 +12,9 @@ D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\refint\Sim
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.pdb
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.genruntimeconfig.cache
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\ref\Sims4ModDoctor.Spike.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\obj\Debug\net8.0\Sims4ModDoctor.Spike.sourcelink.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\VerifyBuild\Sims4ModDoctor.Spike.exe
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\VerifyBuild\Sims4ModDoctor.Spike.deps.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\VerifyBuild\Sims4ModDoctor.Spike.runtimeconfig.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\VerifyBuild\Sims4ModDoctor.Spike.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Spike\bin\VerifyBuild\Sims4ModDoctor.Spike.pdb

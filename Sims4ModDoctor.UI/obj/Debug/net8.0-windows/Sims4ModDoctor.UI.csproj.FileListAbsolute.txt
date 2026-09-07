@@ -22,3 +22,11 @@ D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\Debug\net8.0-windows\Sims4
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI.csproj.AssemblyReference.cache
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4Mod.37C0EE11.Up2Date
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI.sourcelink.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\App.baml
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.exe
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.deps.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.runtimeconfig.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.pdb
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.Core.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.Core.pdb

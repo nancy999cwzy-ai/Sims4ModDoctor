@@ -10,3 +10,6 @@ D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\obj\Debug\net8.0\refint\Sims
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\obj\Debug\net8.0\Sims4ModDoctor.Core.pdb
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\obj\Debug\net8.0\ref\Sims4ModDoctor.Core.dll
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\obj\Debug\net8.0\Sims4ModDoctor.Core.sourcelink.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\bin\VerifyBuild\Sims4ModDoctor.Core.deps.json
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\bin\VerifyBuild\Sims4ModDoctor.Core.dll
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.Core\bin\VerifyBuild\Sims4ModDoctor.Core.pdb
