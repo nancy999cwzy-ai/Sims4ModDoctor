@@ -144,6 +144,10 @@ namespace Sims4ModDoctor.Core
         }
 
         public QuarantineRestoreResult RestoreAllFiles(string rootPath)
+            => RestoreAllFilesExcept(rootPath, originalPathToKeep: null);
+
+        // 还原隔离区时跳过指定原始路径的文件，使其继续留在 .Quarantine（用于诊断完成时保留坏 Mod）
+        public QuarantineRestoreResult RestoreAllFilesExcept(string rootPath, string? originalPathToKeep)
         {
             var result = new QuarantineRestoreResult();
             if (string.IsNullOrWhiteSpace(rootPath)) return result;
@@ -163,6 +167,13 @@ namespace Sims4ModDoctor.Core
                     // 文件已被用户手动移走，直接丢弃这条失效映射
                     if (!File.Exists(sourcePath)) continue;
 
+                    // 诊断锁定的罪魁祸首：跳过还原，保留在隔离区作为长期隔离目标
+                    if (IsSamePath(entry.OriginalPath, originalPathToKeep))
+                    {
+                        pending.Add(entry);
+                        continue;
+                    }
+
                     if (TryMoveBack(sourcePath, entry.OriginalPath, result))
                     {
                         result.RestoredCount++;
@@ -174,7 +185,7 @@ namespace Sims4ModDoctor.Core
                 }
 
                 // 兜底：manifest 缺失或损坏时，按隔离区内的镜像结构推断原位置
-                RestoreUnmappedFiles(rootPath, quarantinePath, pending, result);
+                RestoreUnmappedFiles(rootPath, quarantinePath, pending, result, originalPathToKeep);
             }
             finally
             {
@@ -183,6 +194,30 @@ namespace Sims4ModDoctor.Core
             }
 
             return result;
+        }
+
+        // 诊断完成：还原所有无辜文件，并把 CulpritMod 确保留在 .Quarantine
+        // - 若 Culprit 本轮已在隔离区：还原其余文件，Culprit 原样保留
+        // - 若 Culprit 本轮在测试组（仍在 Mods）：先还原隔离区全部，再把 Culprit 移入隔离区
+        public QuarantineRestoreResult FinalizeCulpritIsolation(string rootPath, ModFileItem culprit)
+        {
+            if (culprit == null) throw new ArgumentNullException(nameof(culprit));
+
+            var result = RestoreAllFilesExcept(rootPath, culprit.FilePath);
+
+            // Culprit 仍在 Mods 原路径 → 移入隔离区作为长期隔离
+            if (File.Exists(culprit.FilePath))
+            {
+                IsolateFiles(rootPath, new List<ModFileItem> { culprit });
+            }
+
+            return result;
+        }
+
+        private static bool IsSamePath(string? left, string? right)
+        {
+            if (string.IsNullOrWhiteSpace(left) || string.IsNullOrWhiteSpace(right)) return false;
+            return string.Equals(Path.GetFullPath(left), Path.GetFullPath(right), StringComparison.OrdinalIgnoreCase);
         }
 
         public bool HasPendingQuarantine(string rootPath)
@@ -230,7 +265,12 @@ namespace Sims4ModDoctor.Core
             }
         }
 
-        private static void RestoreUnmappedFiles(string rootPath, string quarantinePath, List<QuarantineEntry> pending, QuarantineRestoreResult result)
+        private static void RestoreUnmappedFiles(
+            string rootPath,
+            string quarantinePath,
+            List<QuarantineEntry> pending,
+            QuarantineRestoreResult result,
+            string? originalPathToKeep = null)
         {
             var pendingPaths = pending
                 .Select(e => Path.GetFullPath(Path.Combine(quarantinePath, e.QuarantineRelativePath)))
@@ -246,6 +286,18 @@ namespace Sims4ModDoctor.Core
                 // 隔离区内的相对路径就是原始相对路径，可据此反推目标位置
                 string relativePath = Path.GetRelativePath(quarantinePath, sourcePath);
                 string destination = Path.Combine(rootPath, relativePath);
+
+                // 与指定保留路径匹配时不还原（Culprit 长期隔离）
+                if (IsSamePath(destination, originalPathToKeep))
+                {
+                    pending.Add(new QuarantineEntry
+                    {
+                        QuarantineRelativePath = relativePath,
+                        OriginalPath = destination,
+                        IsolatedAt = DateTime.Now
+                    });
+                    continue;
+                }
 
                 if (TryMoveBack(sourcePath, destination, result))
                 {

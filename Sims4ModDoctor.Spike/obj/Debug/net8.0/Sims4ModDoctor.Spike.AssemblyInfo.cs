@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sims4ModDoctor.Spike")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77d62c42bc30dd24542690e9ad3ceac99352dbc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d999db837ae1f68f55b8020c01038643c04ce6ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sims4ModDoctor.Spike")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sims4ModDoctor.Spike")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj": {}
+    "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj": {}
   },
   "projects": {
-    "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj": {
+    "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
+        "projectUniqueName": "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
         "projectName": "Sims4ModDoctor.Spike",
-        "projectPath": "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
+        "projectPath": "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\obj\\",
+        "outputPath": "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

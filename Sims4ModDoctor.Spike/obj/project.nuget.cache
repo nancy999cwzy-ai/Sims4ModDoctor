@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W4qKRn5tqLU=",
+  "dgSpecHash": "e4+abpcXgjk=",
   "success": true,
-  "projectFilePath": "D:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
+  "projectFilePath": "d:\\Sims4Projects\\Sims4ModDoctor\\Sims4ModDoctor.Spike\\Sims4ModDoctor.Spike.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

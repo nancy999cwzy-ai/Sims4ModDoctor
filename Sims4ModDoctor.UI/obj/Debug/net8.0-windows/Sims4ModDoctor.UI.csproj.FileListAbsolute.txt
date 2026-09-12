@@ -30,3 +30,5 @@ D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.UI.pdb
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.Core.dll
 D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\bin\VerifyBuild\Sims4ModDoctor.Core.pdb
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Sims4Projects\Sims4ModDoctor\Sims4ModDoctor.UI\obj\Debug\net8.0-windows\Sims4ModDoctor.UI_MarkupCompile.lref
